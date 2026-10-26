@@ -223,13 +223,12 @@ class MaquinaExpendedora implements MaquinaDespachadora {
 }
 
 /* =========================================================
-   CLASE PRINCIPAL (MAIN) PARA GENERAR EVIDENCIAS
+   CLASE PRINCIPAL PARA GENERAR EVIDENCIAS
    ========================================================= */
 public class Practica9 {
     public static void main(String[] args) {
         System.out.println("=== INICIANDO SMARTVEND ===\n");
 
-        // 1. Construir la maquina con el Builder (Fondos iniciales: $50.0)
         Inventario inventario = new InventarioImpl();
         Monedero monedero = new MonederoImpl(50.0);
         MaquinaDespachadora maquina = new MaquinaExpendedora.Builder()
@@ -237,7 +236,6 @@ public class Practica9 {
                 .monedero(monedero)
                 .build();
 
-        // 2. Registrar y reabastecer productos
         System.out.println("--- REGISTRO Y REABASTECIMIENTO ---");
         RegistroProductoDTO cocaCola = new RegistroProductoDTO("B01", "Coca Cola", LocalDate.of(2025, 12, 31), CategoriaProducto.BEBIDA, 18.50);
         RegistroProductoDTO papas = new RegistroProductoDTO("S01", "Papas Sabritas", LocalDate.of(2024, 6, 15), CategoriaProducto.SNACK, 20.00);
@@ -249,7 +247,6 @@ public class Practica9 {
         System.out.println("Reabastecer Papas (1 ud): " + maquina.reabastecer(new ReabastecimientoDTO("S01", 1)));
         System.out.println("Fondos iniciales de la maquina: $" + maquina.consultarFondos() + "\n");
 
-        // 3. EVIDENCIA: COMPRA CORRECTA
         System.out.println("--- EVIDENCIA: COMPRA CORRECTA ---");
         System.out.println("Intentando comprar 'Coca Cola' ($18.50) pagando con $20.00...");
         ResultadoCompra compraExitosa = maquina.comprar(new CompraDTO("B01", 20.00));
@@ -258,17 +255,15 @@ public class Practica9 {
         System.out.println("Cambio devuelto: $" + compraExitosa.getCambio());
         System.out.println("Fondos en la maquina tras la venta: $" + maquina.consultarFondos() + "\n");
 
-        // 4. EVIDENCIA: COMPRA RECHAZADA (Por pago insuficiente)
         System.out.println("--- EVIDENCIA: COMPRA RECHAZADA (PAGO INSUFICIENTE) ---");
         System.out.println("Intentando comprar 'Papas Sabritas' ($20.00) pagando con $10.00...");
         ResultadoCompra compraPagoInsuficiente = maquina.comprar(new CompraDTO("S01", 10.00));
         System.out.println("Estado de compra: " + compraPagoInsuficiente.getEstado());
         System.out.println("Cambio devuelto (dinero intacto): $" + compraPagoInsuficiente.getCambio() + "\n");
 
-        // 5. EVIDENCIA: COMPRA RECHAZADA (Sin existencias)
         System.out.println("--- EVIDENCIA: COMPRA RECHAZADA (SIN EXISTENCIAS) ---");
         System.out.println("Alguien mas compra las unicas papas...");
-        maquina.comprar(new CompraDTO("S01", 20.00)); // Vaciamos el stock de papas
+        maquina.comprar(new CompraDTO("S01", 20.00));
         
         System.out.println("Intentando comprar 'Papas Sabritas' nuevamente pagando con $50.00...");
         ResultadoCompra compraSinStock = maquina.comprar(new CompraDTO("S01", 50.00));
