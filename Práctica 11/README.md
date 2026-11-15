@@ -441,46 +441,6 @@ Beneficio: el algoritmo se escribe y se prueba una sola vez, las subclases son s
 
 ---
 
-## 8. Trazabilidad y reproducibilidad
 
-### Entorno utilizado
 
-| Herramienta | Versión |
-|---|---|
-| Java (OpenJDK) | 25.0.2 (compatible con JDK 11+) |
-| Git | 2.55 |
-| Sistema operativo | Windows |
 
-### Compilar y ejecutar
-
-Desde la carpeta `Práctica 11`:
-
-```bash
-# Compilar (los .class quedan en bin/, que está ignorado por Git)
-javac -d bin Practica11.java
-```
-
-```bash
-# Ejecutar con el caso de prueba (Git Bash / Linux / macOS / CMD)
-java -cp bin Practica11 < evidencias/entrada.txt
-```
-
-```powershell
-# Ejecutar con el caso de prueba (PowerShell)
-Get-Content evidencias\entrada.txt | java -cp bin Practica11
-```
-
-La salida debe coincidir línea por línea con [`evidencias/salida.txt`](evidencias/salida.txt).
-
-### Formato de entrada (HackerRank)
-
-```
-N
-TEXTO|id|autor|titulo|meGusta|comentarios|compartidos|texto
-IMAGEN|id|autor|titulo|meGusta|comentarios|compartidos|descripcionImagen|formato
-VIDEO|id|autor|titulo|meGusta|comentarios|compartidos|duracionSegundos|visualizaciones
-```
-
-### Para subir a HackerRank
-
-Copiar el contenido de `Practica11.java` y cambiar únicamente `public class Practica11` por `public class Solution`.
