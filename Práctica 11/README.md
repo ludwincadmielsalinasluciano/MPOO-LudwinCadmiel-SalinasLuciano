@@ -1,5 +1,6 @@
+# Diagramas – Práctica 11
 
-## 3. Diagrama de clases
+## Diagrama de clases
 
 ```mermaid
 classDiagram
@@ -105,7 +106,7 @@ classDiagram
     Result ..> Publicable : crea
 ```
 
-### Flujo del método plantilla `publicar()`
+## Flujo del método plantilla `publicar()`
 
 ```mermaid
 flowchart TD
@@ -119,13 +120,3 @@ flowchart TD
     G --> H["5. getDescripcion() - subclase"]
     H --> I["6. new ResultadoPublicacion(...)"]
 ```
-
----
-
-
-
-
-
-
-
-
