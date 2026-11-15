@@ -6,21 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-/*
- * ==================================================
- * PRACTICA #11 - POLIMORFISMO (2da parte)
- * Vibe - Sistema de publicaciones para una red social
- *
- * Alumno: Ludwin Cadmiel Salinas Luciano
- * Materia: Modelos de Programacion Orientada a Objetos
- *
- * Nota: en HackerRank la clase principal se llama
- * "Solution". En GitHub se renombra a "Practica11"
- * (igual que en practicas anteriores). Es el unico
- * cambio; el resto del codigo es identico.
- * ==================================================
- */
-
 
 /*
  * Contrato comun de las publicaciones.
