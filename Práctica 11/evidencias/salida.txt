@@ -1,0 +1,22 @@
+1|Texto | Hola Vibe | ana|210.00|DESTACADA
+2|Imagen | Atardecer | PNG | luis|310.00|VIRAL
+3|Video | Tutorial Java | 300 s | sofia|195.00|DESTACADA
+4|Texto | Corto | pedro|0.00|RECHAZADA
+5|Imagen | Selfie | null | maria|0.00|RECHAZADA
+6|Video | Video largo | 900 s | carlos|0.00|RECHAZADA
+7|Texto | Empate | lucia|210.00|DESTACADA
+8|Video | Clip viral | 120 s | diego|540.00|VIRAL
+9|Texto | Sin interacciones | eva|0.00|PUBLICADA
+RANKING
+8|540.00|VIRAL
+2|310.00|VIRAL
+1|210.00|DESTACADA
+7|210.00|DESTACADA
+3|195.00|DESTACADA
+4|0.00|RECHAZADA
+5|0.00|RECHAZADA
+6|0.00|RECHAZADA
+9|0.00|PUBLICADA
+VIRALES
+2|Imagen | Atardecer | PNG | luis|310.00
+8|Video | Clip viral | 120 s | diego|540.00

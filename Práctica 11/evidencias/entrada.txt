@@ -1,0 +1,10 @@
+9
+TEXTO|1|ana|Hola Vibe|100|20|10|Mi primera publicacion en Vibe
+IMAGEN|2|luis|Atardecer|100|20|10|Foto del atardecer en la playa|png
+VIDEO|3|sofia|Tutorial Java|50|10|5|300|2500
+TEXTO|4|pedro|Corto|10|1|1|Hola
+IMAGEN|5|maria|Selfie|5|1|0|Foto de perfil|GIF
+VIDEO|6|carlos|Video largo|10|0|0|900|0
+TEXTO|7|lucia|Empate|150|10|6|Este texto empata con la publicacion 1
+VIDEO|8|diego|Clip viral|100|30|20|120|10000
+TEXTO|9|eva|Sin interacciones|0|0|0|Publicacion valida sin interacciones
