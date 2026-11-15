@@ -25,9 +25,6 @@ interface Publicable {
  * ==================================================
  * DTO BASE
  * ==================================================
- *
- * Contiene solamente la informacion comun recibida
- * desde HackerRank.
  */
 
 abstract class PublicacionDTO {
@@ -736,11 +733,7 @@ class Result {
 }
 
 
-/*
- * ==================================================
- * CODIGO PROPORCIONADO POR HACKERRANK (sin cambios)
- * ==================================================
- */
+
 
 final class HackerRankVibe {
 
